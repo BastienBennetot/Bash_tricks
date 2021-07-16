@@ -5,7 +5,7 @@
 
 #With Header
   # Adding a column with filenames
-    awk -v OFS=',' 'FNR==1 && NR!=1{next;}{print $0, FILENAME}' *.csv >merged_result.csv
+    awk -v OFS=',' 'FNR==1 && NR!=1{next;}{print $0, FILENAME}' *.csv >merged.csv
   # Not adding a filename column
     awk '(NR ==1) || (FNR>1)' *.csv >merged.csv
 
