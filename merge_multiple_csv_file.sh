@@ -15,3 +15,5 @@
   # Not adding a filename column
     cat *.csv >merged.csv
 
+# Concatenate all csv but keep only one header
+awk '(NR == 1) || (FNR > 1)' *.csv > merged.csv
